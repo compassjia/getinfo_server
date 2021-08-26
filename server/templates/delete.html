@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改页面</title>
+</head>
+
+<style>
+
+	body{
+		font-size:16px;
+		font-family:"宋体";
+		}
+	.bule{
+	border-color:#ABFEFE;}
+	.font1{
+		color:#666;}
+
+
+</style>
+<script src="/static/wx.js"></script>
+<script type="text/javascript">
+
+ </script>
+<body background="/static/bg_bubbles.png" >
+<form  action="/delete/" method="post" id="delete">
+        {% csrf_token %}
+    <table width="800" border="0" align="center" cellspacing="30">
+        <tr>
+        <td width="80"><b>姓名:</b></td>
+        <td><input type="text" name="name" class="bule"/></td>
+        </tr>
+        <td width="80"><b>手机号:</b></td>
+        <td><input type="text" name="phone" class="bule"/></td>
+        </tr>
+        <td width="80"><b>岗位:</b></td>
+        <td><input type="text" name="post" class="bule"/></td>
+        </tr>
+        <td width="80"><b>所属机构:</b></td>
+        <td><input type="text" name="branch" class="bule"/></td>
+        </tr>
+        <tr>
+        <td width="80"><b>标准:</b></td>
+        <td><select name ="standard">
+            <option value=""></option>
+            <option value="标准1">标准1</option>
+            <option value="标准2">标准2</option>
+        </select></td>
+        </tr>
+        <tr>
+        <td width="80"><b>渠道:</b></td>
+        <td><select name ="channel">
+            <option value=""></option>
+            <option value="个险">个险</option>
+            <option value="团险">团险</option>
+            <option value="银保">银保</option>
+        </select></td>
+        </tr>
+        <tr>
+        <td><input type="submit" value="删除"/></td>
+        </tr>
+        <tr>
+            <td><input type=button value="返回主页" onclick="window.location.href='../../'"></td>
+        </tr>
+    </table>
+    <div class="text" style="text-align:center;font-weight:bold;font-size: large;color: red" >
+        {{ result }}
+
+    </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询页面</title>
+</head>
+
+<style>
+
+	body{
+		font-size:16px;
+		font-family:"宋体";
+		}
+	.bule{
+	border-color:#ABFEFE;}
+	.font1{
+		color:#666;}
+
+
+</style>
+<script src="/static/wx.js"></script>
+<script type="text/javascript">
+
+ </script>
+<body background="/static/bg_bubbles.png" >
+<form  action="/query/" method="post" id="query">
+        {% csrf_token %}
+    <table width="800" border="0" align="center" cellspacing="30">
+
+
+        <tr>
+        <td width="80"><b>机构:</b></td>
+        <td><select name ="branch">
+            <option value=""></option>
+            <option value="广州">广州</option>
+            <option value="珠海">珠海</option>
+            <option value="汕头">汕头</option>
+        </select></td>
+        </tr>
+        <tr>
+        <td><input type="submit" value="查询"/></td>
+        </tr>
+        <tr>
+            <td><input type=button value="返回主页" onclick="window.location.href='../../'"></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>

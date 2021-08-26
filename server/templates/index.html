@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+</head>
+
+<style>
+
+	body{
+		font-size:16px;
+		font-family:"宋体";
+		}
+	.bule{
+	border-color:#ABFEFE;}
+	.font1{
+		color:#666;}
+
+
+</style>
+<script src="/static/wx.js"></script>
+<script type="text/javascript">
+   function check(fm){
+     	 for(i=1;i<fm.length;i++){
+     	   if(fm.elements[i].value=="") {
+               alert("请正确填写账号密码");
+
+               fm.elements[i].focus();
+               return false;
+           }
+         }
+    	 return true;
+  }
+ </script>
+<body background="/static/bg_bubbles.png" >
+
+    <a href="/query">查询信息</a>&nbsp;&nbsp;&nbsp;查询目前登记设备情况
+    <br/>
+    <br/>
+
+    <div class="text" style="text-align:center;font-weight:bold;font-size: large;color: red" >
+        {{ result }}
+    </div>
+</body>
+</html>

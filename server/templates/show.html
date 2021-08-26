@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆页面</title>
+</head>
+
+<style>
+
+	body{
+		font-size:16px;
+		font-family:"宋体";
+		}
+	.bule{
+	border-color:#ABFEFE;}
+	.font1{
+		color:#666;}
+
+
+</style>
+<script src="/static/wx.js"></script>
+<script type="text/javascript">
+
+  }
+ </script>
+<body background="/static/bg_bubbles.png" >
+    <table border="1">
+
+       <tr>
+        <th>姓名:</th>
+        <th>工号:</th>
+        <th>机构:</th>
+        <th>职场:</th>
+        <th>机器名:</th>
+        <th>IP地址:</th>
+        <th>mac地址:</th>
+        <th>CCM进程状态:</th>
+        <th>cpu:</th>
+       </tr>
+        {% for data in result %}
+        <tr>
+            <th>{{ data.username }}</th>
+            <th>{{ data.sapno }}</th>
+            <th>{{ data.branch }}</th>
+            <th>{{ data.place }}</th>
+            <th>{{ data.hostname }}</th>
+            <th>{{ data.ipaddress }}</th>
+            <th>{{ data.mac }}</th>
+            <th>{{ data.ccmprocess }}</th>
+            <th>{{ data.cpuinfo }}</th>
+        </tr>
+    {% endfor %}
+    </table>
+
+</body>
+</html>
